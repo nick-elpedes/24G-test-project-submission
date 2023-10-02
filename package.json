@@ -1,0 +1,18 @@
+{
+  "name": "24g-test-project-submission",
+  "version": "1.0.0",
+  "description": "Submission for 24G test project",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Nicholas Elpedes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.2"
+  }
+}
