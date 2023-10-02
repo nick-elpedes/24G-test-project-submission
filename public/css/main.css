@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #ffffff;
-  font-size: 100px;
+  font-size: 54pt;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  row-gap: 50px;
+  gap: 50px;
   margin: 50px;
 }
 
@@ -36,6 +36,17 @@ body {
   height: 100%;
   display: block;
   text-align: center;
-  line-height: 100%;
+  line-height: calc(100vh - 100px);
 }
 
+#blue {
+  background-color: #468B97;
+}
+
+#red {
+  background-color: #EF6262;
+}
+
+#yellow {
+  background-color: #F3AA60;
+}

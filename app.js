@@ -17,14 +17,14 @@ app.get('/controls', (req, res) => res.sendFile(__dirname + '/views/controls.htm
 app.get('/', (req, res) => res.sendFile(__dirname + '/views/index.html'));
 
 io.on('connection', (socket) => {
-  socket.on('disconnect', () => console.log('user disconnected'));
+  //socket.on('disconnect', () => console.log('user disconnected'));
 
   // join room corresponding to socket type
   if(socket.handshake.query.type == 'control') {
-    console.log('A controller connected');
+    // console.log('A controller connected');
     socket.join('control');
   } else if(socket.handshake.query.type == 'display') {
-    console.log('A display connected');
+    // console.log('A display connected');
     socket.join('display');
     // when a display socket connects, send it the current color
     socket.emit('color change', colorContainer);
@@ -32,7 +32,7 @@ io.on('connection', (socket) => {
 
   // when a color is sent from a control socket, send it to the display sockets
   socket.on('color change', (color) => {
-    console.log(color);
+    // console.log(color);
     colorContainer.color = color.color;
     colorContainer.name = color.name;
     io.to('display').emit('color change', colorContainer);
